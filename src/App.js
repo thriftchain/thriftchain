@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import AllRoutes from './config/AllRoutes';
+import '@rainbow-me/rainbowkit/styles.css';
+import { darkTheme, getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { configureChains, createConfig, WagmiConfig } from 'wagmi';
+import { polygon } from 'wagmi/chains';
+import { publicProvider } from 'wagmi/providers/public';
 
-function App() {
+const { chains, publicClient, webSocketPublicClient } = configureChains(
+  [
+    // mainnet,
+    polygon,
+    //polygonMumbai,
+    // optimism,
+    // arbitrum,
+    // goerli,
+    // ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [goerli] : []),
+  ],
+  [publicProvider()]
+);
+
+const { connectors } = getDefaultWallets({
+  appName: 'RainbowKit App',
+  projectId: 'YOUR_PROJECT_ID',
+  chains,
+});
+
+const wagmiConfig = createConfig({
+  autoConnect: true,
+  connectors,
+  publicClient,
+  webSocketPublicClient,
+});
+
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <WagmiConfig config={wagmiConfig}>
+      <RainbowKitProvider chains={chains}
+        theme={darkTheme({
+          accentColor: 'rgb(6,14,55)'
+        })}>
+    <div>
+      <AllRoutes />
     </div>
+    </RainbowKitProvider>
+    </WagmiConfig>
+
   );
-}
+};
 
 export default App;
