@@ -2,6 +2,7 @@ import React from "react";
 import sideimage from "../../assets/sideimage.svg";
 import sideimage2 from "../../assets/sideimage2.svg";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import {Link} from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -24,7 +25,7 @@ const Hero = () => {
           <div className="mx-24 mb-20 mt-4">
           <ConnectButton />
           </div>
-          <h3 className="text-white text-sm  text-center font-normal">Already have an account? <span className="text-[#BD5FB8]">Log in</span></h3>
+          <h3 className="text-white text-sm  text-center font-normal">Already have an account? <Link to='/log-in'><span className="text-[#BD5FB8]">Log in</span></Link></h3>
         </div>
         <img src={sideimage2} alt="sideimage2" style={{ marginLeft: "5rem" }} />
       </div>

@@ -3,6 +3,7 @@ import sideimage from "../../assets/sideimage.svg";
 import sideimage2 from "../../assets/sideimage2.svg";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { LoginParent, LoginWrapper } from "./login.styles";
+import {Link} from "react-router-dom";
 
 const Login = () => {
   return (
@@ -27,7 +28,7 @@ const Login = () => {
           <div className="mx-24 mb-20 mt-4">
           <ConnectButton />
           </div>
-          <h3 className="text-white text-sm  text-center font-normal">Don’t have an account yet? <span className="text-[#BD5FB8]">Get started</span></h3>
+          <h3 className="text-white text-sm  text-center font-normal">Don’t have an account yet? <Link to='/onboarding-data'><span className="text-[#BD5FB8]">Get started</span></Link></h3>
         </div>
         <img src={sideimage2} alt="sideimage2" style={{ marginLeft: "5rem" }} />
       </div>
