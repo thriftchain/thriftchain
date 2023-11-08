@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
-  
+
 
     return (
         <nav class="bg-[#070624]">
@@ -20,10 +20,10 @@ const Navbar = () => {
                     <li className='hidden md:inline-block  text-white'><Link to='/about-us'>About us</Link></li>
 
                 </ul>
-               
-                </div>
-       
 
+            </div>
+
+            <hr />
 
         </nav>
     );

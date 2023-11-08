@@ -4,6 +4,9 @@ import Home from "../pages/home/Home";
 import Login from "../pages/log-in/Login";
 import Layout from '../layout/Layout';
 import OnboardingData from '../pages/onboarding/OnboardingData';
+import User from '../pages/dashboard/User';
+import GroupModule from '../pages/group-module/GroupModule';
+import IndividualModule from '../pages/individual-module/IndividualModule';
 
 const AllRoutes = () => {
  
@@ -19,6 +22,9 @@ const AllRoutes = () => {
               <Route path='/' element={<Home />} />
               <Route path='/log-in' element={<Login/>}/>
              <Route path='/onboarding-data' element={<OnboardingData/>}/>
+             <Route path='/user' element={<User/>}/>
+             <Route path='/group-module' element={<GroupModule/>}/>
+             <Route path='/individual-module' element={<IndividualModule/>}/>
             </Routes>
           </Layout>
         </BrowserRouter>
