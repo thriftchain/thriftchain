@@ -17,7 +17,7 @@ import vacation from "../../assets/vacation.svg";
 import school from "../../assets/school.svg";
 import purchase from "../../assets/purchase.svg";
 import { AiOutlineTeam } from "react-icons/ai";
-
+import {Link} from "react-router-dom";
 
 
 
@@ -33,10 +33,10 @@ const UserHome = () => {
                 <h2 className="text-[20px] md:text-[20px] font-bold capitalize text-white  mx-64">
                     Browse and find contribution modules to join</h2>
 
-                <div className='mx-72 mt-4 mb-3'> <button class="bg-gradient-to-r from-[#9C0F94] to-[#142698] hover:bg-blue-700 text-white font-normal py-2 rounded-full border-white border-spacing-1 ">
-                    Create a group module    </button>
-                    <button class="bg-[#2C2C2C] hover:bg-blue-700 text-white font-normal py-2 rounded-full border-white border-spacing-1 mx-4">
-                        Create an individual module    </button>
+                <div className='mx-72 mt-4 mb-3'><Link to='/group-module'> <button class="bg-gradient-to-r from-[#9C0F94] to-[#142698] hover:bg-blue-700 text-white font-normal py-2 rounded-full border-white border-spacing-1 ">
+                    Create a group module    </button></Link>
+                   <Link to='/individual-module'> <button class="bg-[#2C2C2C] hover:bg-blue-700 text-white font-normal py-2 rounded-full border-white border-spacing-1 mx-4">
+                        Create an individual module    </button></Link>
                 </div>
 
 
