@@ -6,7 +6,7 @@ import { AiOutlineTeam } from "react-icons/ai";
 
 export const sideBarLinks = [
   {
-    path: "/",
+    path: "/user/",
     icon: <CgHomeAlt size={22} />,
     text: "Home",
     alt: "home",

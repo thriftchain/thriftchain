@@ -2,14 +2,16 @@ import React from "react";
 import Sidebar from "../../components/sidebar/Sidebar";
 import {
 
-   
+
     UserParent,
     UserWrapper,
-    
+
 
 } from "./user.styles";
 import { sideBarLinks } from "./user.routes";
-import UserHome from "../../components/user-home/Userhome";
+import UserHome from "../../pages/user-home/Userhome";
+import { Routes, Route } from "react-router-dom";
+import UserOverview from "../../pages/overview/UserOverview";
 
 
 
@@ -30,7 +32,17 @@ const User = () => {
                         overflowY: "auto",
                     }}
                 >
-                 <UserHome/>   
+                    <Routes>
+                        
+                            <Route index element={<UserHome />} />
+                            <Route path="/" element={<UserHome />} />
+                            <Route path="/overview" element={<UserOverview />} />
+
+                       
+
+
+                    </Routes>
+                    
                 </div>
 
 
