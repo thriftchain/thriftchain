@@ -2,9 +2,8 @@ import React from "react";
 import { HomeParent,HomeWrapper } from "./home.styles";
 import Hero from "../../components/hero/Hero";
 import Thrift from "../../components/thrift/Thrift";
-import Key from "../../components/key/Key";
-import KeyF from "../../components/key/KeyF";
-import Great from "../../components/great/Great";
+import Key from "../../components/key/index";
+import Great from "../../components/great/index";
 
 
 const Home = () => {
@@ -19,7 +18,6 @@ const Home = () => {
                 <Hero/>
                 <Thrift/>
                 <Key/>
-                <KeyF/>
                 <Great/>
             </HomeWrapper>
         </HomeParent>

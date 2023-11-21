@@ -18,37 +18,37 @@ function Footer() {
           </p>
           
         </div>
-        <div className="md:flex justify-center items-start md:gap-[100px] mx-8">
+        <div className="md:flex justify-center items-start md:gap-[100px]">
           <div className="flex flex-row gap-[100px]">
-            <div className="pt-[20px] sm:pt-0 flex flex-col gap-7">
+            <div className="pt-[20px] sm:pt-0 flex flex-col gap-12">
               <p className="text-gray-50 text-[15px] md:text-[20px] font-semibold"><Link>About us </Link></p>
               
     
             </div>
 
-            <div className="pt-[20px] sm:pt-0 flex flex-col gap-7">
+            <div className="pt-[20px] sm:pt-0 flex flex-col gap-12">
               <p className="text-gray-50 text-[15px] md:text-[20px] font-semibold">Join our family</p>
               
               
             </div>
           </div>
 
-          <div className="pt-[20px] sm:pt-0 flex flex-col gap-7">
+          <div className="pt-[20px] sm:pt-0 flex flex-col gap-12">
             <p className="text-gray-50 text-[15px] md:text-[20px] font-semibold">FAQs</p>
             
           </div>
-          <div className="pt-[20px] sm:pt-0 flex flex-col gap-7">
+          <div className="pt-[20px] sm:pt-0 flex flex-col gap-12">
             <p className="text-gray-50 text-[15px] md:text-[20px] font-semibold">Gallery n contact</p>
             
           </div>
 
-          <div className="pt-[20px] sm:pt-0 flex flex-col gap-7">
+          <div className="pt-[20px] sm:pt-0 flex flex-col gap-12">
             <p className="text-gray-50 text-[15px] md:text-[20px] font-semibold">Reports</p>
             
           </div>
           
         </div>
-        <div className="pt-[20px] sm:pt-0 flex flex-col gap-7 mx-8 mt-4">
+        <div className="pt-[20px] sm:pt-0 flex flex-col gap-7 mt-2">
             <p className="text-gray-50 text-[15px] md:text-[20px] font-semibold">Copyright 2023 -ThriftChain. All rights reserved.</p>
             
           </div>
