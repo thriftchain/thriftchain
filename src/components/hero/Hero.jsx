@@ -27,7 +27,7 @@ const Hero = () => {
           </div>
           <h3 className="text-white text-sm  text-center font-normal">Already have an account? <Link to='/log-in'><span className="text-[#BD5FB8]">Log in</span></Link></h3>
         </div>
-        <img src={sideimage2} alt="sideimage2" style={{ marginLeft: "5rem" }} />
+        <img src={sideimage2} alt="sideimage2" class='lg:block hidden mx-10'/>
       </div>
       <div className="grid grid-cols-4 gap-4 mx-72 mb-3 mt-2">
         <div className="border-2 bg-[#060E37] rounded-lg mb-6 sm:mb-0 w-[250px] h-[70px] gap-4">
