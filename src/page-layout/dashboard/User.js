@@ -9,7 +9,7 @@ import {
 
 } from "./user.styles";
 import { sideBarLinks } from "./user.routes";
-import UserHome from "../../pages/user-home/Userhome";
+import UserHome from "../../pages/user-home/index";
 import { Routes, Route } from "react-router-dom";
 import UserOverview from "../../pages/overview/UserOverview";
 
