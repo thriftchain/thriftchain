@@ -12,6 +12,7 @@ import { sideBarLinks } from "./user.routes";
 import UserHome from "../../pages/user-home/index";
 import { Routes, Route } from "react-router-dom";
 import UserOverview from "../../pages/overview/UserOverview";
+import Message from "../../pages/message/Message";
 
 
 
@@ -37,6 +38,7 @@ const User = () => {
                             <Route index element={<UserHome />} />
                             <Route path="/" element={<UserHome />} />
                             <Route path="/overview" element={<UserOverview />} />
+                            <Route path="/message" element={< Message/>}/>
 
                        
 

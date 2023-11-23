@@ -35,7 +35,7 @@ const OnboardingData = () => {
                             <label class="block text-white text-sm font-bold mb-2" for="country">
                                 Country
                             </label>
-                            <input class="bg-[#B1B7DD] border border-[#B1B7DD] rounded w-full py-2 px-3 text-[#0A134C] mb-3 leading-tight focus:outline-none focus:shadow-outline" id="country" type="password" placeholder="Add your country"></input>
+                            <input class="bg-[#B1B7DD] border border-[#B1B7DD] rounded w-full py-2 px-3 text-[#0A134C] mb-3 leading-tight focus:outline-none focus:shadow-outline" id="country" type="text" placeholder="Add your country"></input>
 
                         </div>
                         <div class='mb-1'>

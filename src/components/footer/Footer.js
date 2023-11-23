@@ -9,7 +9,7 @@ function Footer() {
       <div className="md:flex flex-wrap md:flex-row justify-between w-full">
       <div className="md:w-[519px] pb-[60px] md:h-[88px] my-[40px]  md:mt-[20px]">
           <div className="flex flex-row items-center gap-4">
-            <img src={logo} alt='logo'/>
+           <Link to='/'> <img src={logo} alt='logo'/> </Link>
            
           </div>
           
@@ -18,31 +18,31 @@ function Footer() {
           </p>
           
         </div>
-        <div className="md:flex justify-center items-start md:gap-[100px]">
+        <div className="md:flex justify-center items-start md:gap-[180px]">
           <div className="flex flex-row gap-[100px]">
-            <div className="pt-[20px] sm:pt-0 flex flex-col gap-12">
+            <div className="pt-[20px] sm:pt-0 flex flex-col gap-15">
               <p className="text-gray-50 text-[15px] md:text-[20px] font-semibold"><Link>About us </Link></p>
               
     
             </div>
 
-            <div className="pt-[20px] sm:pt-0 flex flex-col gap-12">
+            <div className="pt-[20px] sm:pt-0 flex flex-col gap-15">
               <p className="text-gray-50 text-[15px] md:text-[20px] font-semibold">Join our family</p>
               
               
             </div>
           </div>
 
-          <div className="pt-[20px] sm:pt-0 flex flex-col gap-12">
+          <div className="pt-[20px] sm:pt-0 flex flex-col gap-15">
             <p className="text-gray-50 text-[15px] md:text-[20px] font-semibold">FAQs</p>
             
           </div>
-          <div className="pt-[20px] sm:pt-0 flex flex-col gap-12">
+          <div className="pt-[20px] sm:pt-0 flex flex-col gap-15">
             <p className="text-gray-50 text-[15px] md:text-[20px] font-semibold">Gallery n contact</p>
             
           </div>
 
-          <div className="pt-[20px] sm:pt-0 flex flex-col gap-12">
+          <div className="pt-[20px] sm:pt-0 flex flex-col gap-15">
             <p className="text-gray-50 text-[15px] md:text-[20px] font-semibold">Reports</p>
             
           </div>

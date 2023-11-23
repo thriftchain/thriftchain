@@ -11,11 +11,11 @@ const Navbar = () => {
 
     return (
         <nav class="bg-[#070624]">
-            <div className='flex gap-2 justify-center items-center mx-8 pt-10'>
-                <img src={logo} alt='logo' />
+            <div className='flex gap-4 justify-center items-center mx-8 pt-10'>
+               <Link to='/'> <img src={logo} alt='logo' /></Link>
 
 
-                <ul className='flex m-auto gap-16'>
+                <ul className='flex m-auto gap-20'>
                     <li className='hidden md:inline-block text-white '><Link to='/'>Home</Link></li>
                     <li className='hidden md:inline-block  text-white'><Link to='/about-us'>About us</Link></li>
 
