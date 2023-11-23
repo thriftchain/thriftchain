@@ -23,7 +23,7 @@ const AllRoutes = () => {
   return (
     <div>
       
-      
+     
         <BrowserRouter>
           <Layout>
             <Routes>
