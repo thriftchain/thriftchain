@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 const Hero = () => {
   return (
     <main className="bg-[#070624] w-screen">
-      <h1 className="text-[30px] md:text-[34px] font-bold capitalize  text-white mx-80 mt-10 px-8">
+      <h1 className="text-[30px] md:text-[34px] font-bold capitalize  text-white mx-80 mt-20 px-8">
         Transforming Finance with ThriftChain:{" "}
       </h1>
       <h2 className="text-[30px] md:text-[32px] font-bold capitalize text-white  mx-96 px-8">
