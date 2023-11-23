@@ -18,13 +18,13 @@ const GroupModule = () => {
 
                         <img src={groupmodule} alt="groupmodule" />
 
-                        <figcaption class="absolute px-4 text-lg text-white bottom-20 mx-96">
+                        <figcaption class="absolute px-16 text-lg text-white bottom-20 mx-96">
                             <h1 class="text-white font-semibold text-4xl"> Create a group module </h1>
                             <p>Fill out the form below to start a group module saving.</p>
                         </figcaption>
                     </figure>
 
-                    <form class="bg-[#070624] shadow-md rounded px-8 pt-6 pb-8 mb-4 w-1/2 mx-80">
+                    <form class="bg-[#070624] shadow-md rounded  pt-6 pb-8 mb-4 w-1/2 mx-96">
                         <div class="mb-1">
                             <label class="block text-white text-sm font-bold mb-2" for="username">
                                 Name of the group
