@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { GroupModuleParent, GroupModuleWrapper } from "./groupmodule.styles";
 import Checkbox from "../../components/checkbox/Checkbox";
 import groupmodule from "../../assets/groupmodule.svg";
+import { useContractWrite, usePrepareContractWrite } from 'wagmi';
+import abi from "../../contract/thrift.json";
 
 
 const GroupModule = () => {
@@ -9,6 +11,13 @@ const GroupModule = () => {
     const onChange = () => {
         setChecked(!checked);
     };
+
+    const { config } = usePrepareContractWrite({
+        address: '0x9377C1e6747e9b9541d79B5Dd0eC404597802CBa',
+        abi: abi,
+        functionName: 'NewGroupCreated',
+    })
+    const { data, isLoading, isSuccess, write } = useContractWrite(config)
 
     return (
         <GroupModuleParent>
@@ -104,6 +113,12 @@ const GroupModule = () => {
                                 <select class="block appearance-none w-full bg-[#B1B7DD] border border-[#B1B7DD] text-[#0A134C] rounded leading-tight focus:outline-none focus:bg--[#B1B7DD] focus:border-[#B1B7DD]" id="coin">
                                     <option>Click on the arrow to select an option</option>
                                     <option>ToroNGN</option>
+                                    <option>ToroUSD</option>
+                                    <option>ToroEUR</option>
+                                    <option>ToroGBP</option>
+                                    <option>ToroEGP</option>
+                                    <option>ToroKSH</option>
+                                    <option>ToroZAR</option>
                                 </select>
                                 <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                                     <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
@@ -149,9 +164,12 @@ const GroupModule = () => {
                             />
                         </div>
                         <div class="flex items-center justify-between mt-6">
-                            <button class="bg-gradient-to-r from-[#9C0F94] to-[#142698] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline min-w-full" type="button">
+                            <button class="bg-gradient-to-r from-[#9C0F94] to-[#142698] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline min-w-full" type="button"
+                             onClick={() => write?.()}>
                                 Create group Module
                             </button>
+                            {isLoading && <div>Check Wallet</div>}
+                            {isSuccess && <div>Transaction: {JSON.stringify(data)}</div>}
 
                         </div>
                         <div class="flex items-center justify-between mt-6">
