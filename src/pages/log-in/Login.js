@@ -6,6 +6,8 @@ import { LoginParent, LoginWrapper } from "./login.styles";
 import {Link} from "react-router-dom";
 
 const Login = () => {
+  
+
   return (
     <LoginParent>
       <LoginWrapper>
@@ -27,6 +29,9 @@ const Login = () => {
           </h3>
           <div className="mx-24 mb-20 mt-4">
           <ConnectButton />
+           <div class='mt-4 mx-6'><Link to='/onboarding-data'><button class="bg-gradient-to-r from-[#9C0F94] to-[#142698] hover:bg-blue-700 text-white font-semibold py-2 rounded border-white border-spacing-1" >
+            Start Saving    </button></Link>
+            </div> 
           </div>
           <h3 className="text-white text-sm  text-center font-normal">Don’t have an account yet? <Link to='/onboarding-data'><span className="text-[#BD5FB8]">Get started</span></Link></h3>
         </div>

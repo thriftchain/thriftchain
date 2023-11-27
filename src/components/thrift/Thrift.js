@@ -15,7 +15,7 @@ const Thrift = () => {
         <div className="flex flex-col gap-4">
           <h1 className='text-[25px] md:text-[30px] font-bold capitalize  text-[#BD5FB8]' >ThriftChain: Your Key to Financial Freedom </h1>
           <h2 className='text-[25px] md:text-[20px] font-bold capitalize  text-white'>Unlock Savings, Achieve Dreams, Secure Tomorrow</h2>
-          <div > <Link to='/'><button class="bg-gradient-to-r from-[#9C0F94] to-[#142698] hover:bg-blue-700 text-white font-semibold py-2 rounded border-white border-spacing-1 ">
+          <div > <Link to='/log-in'><button class="bg-gradient-to-r from-[#9C0F94] to-[#142698] hover:bg-blue-700 text-white font-semibold py-2 rounded border-white border-spacing-1 ">
             Start Saving    </button> </Link></div>
           <h1 className='text-[30px] md:text-[30px] font-bold capitalize  text-white' >About ThriftChain </h1>
           <p className="text-[15px] md:text-[15px] text-white mb-4">ThriftChain is a blockchain-based financial management platform. It enables individual and

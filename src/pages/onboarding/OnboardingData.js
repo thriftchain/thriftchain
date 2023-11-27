@@ -2,9 +2,11 @@ import React from "react";
 import sideimage from "../../assets/sideimage.svg";
 import sideimage2 from "../../assets/sideimage2.svg";
 import { OnboardingParent, OnboardingWrapper } from "./onboarding.styles";
-
+import {Link} from "react-router-dom";
 
 const OnboardingData = () => {
+  
+
     return (
         <OnboardingParent>
             <OnboardingWrapper>
@@ -42,10 +44,10 @@ const OnboardingData = () => {
                             <label class="text-sm font-medium text-white block mb-2" for="user_avatar">Picture </label>
                             <input class="block w-full cursor-pointer bg-[#B1B7DD] border-[#B1B7DD] border-solid border-2  text-[#0A134C] focus:outline-none focus:border-black  text-sm rounded-lg" aria-describedby="file_upload" id="file_upload" type="file" placeholder='Add a picture' />
                         </div>
-                        <div class="flex items-center justify-between mt-6">
-                            <button class="bg-gradient-to-r from-[#9C0F94] to-[#142698] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline min-w-full" type="button">
+                        <div class="flex items-center justify-between mt-6 mx-24">
+                           <Link to='/user'><button class="bg-gradient-to-r from-[#9C0F94] to-[#142698] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" type="button">
                                 Submit
-                            </button>
+                            </button></Link> 
                         </div>
                     </form>
                     <h3 className="text-white text-sm  text-center font-normal">Don’t have an account yet? <span className="text-[#BD5FB8]">Get started</span></h3>
