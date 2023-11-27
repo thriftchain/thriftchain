@@ -1,8 +1,12 @@
 
 Product Name: Thriftchain
+
 Project Category: Finance (Blockchain Thrift and Contribution Application) 
+
 Team Name: Nature Ds
+
 Project Title: ThriftChain
+
 Description
 
 
