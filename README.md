@@ -47,6 +47,8 @@ Transactions
 Tools used for building:
 
 Frontend: ReactJS, Tailwind CSS, Styled Components, RainbowKit, EtherJS, Wagmi, Flowbite
+
+
 Smart Contract: Solidity, Hardhat, Typescript, Env, Npm for packages installationToro testnet
 
 
