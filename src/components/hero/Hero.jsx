@@ -14,7 +14,7 @@ const Hero = () => {
       <h2 className="text-[30px] md:text-[32px] font-bold capitalize text-white  mx-20">
         Your Path to <span className="text-[#BD5FB8]">Financial Freedom.</span>
       </h2>
-      <div class="grid grid-cols-3 gap-4 mx-48 mt-8">
+      <div className="grid grid-cols-3 gap-0 h-max">
         <img src={sideimage} alt="sideimage" />
         <div className="border-2 border-white bg-[#070624] rounded-lg mb-6 sm:mb-0 w-[340px] h-[300px]">
           <h2 className="text-white text-xl  text-center font-bold leading-loose">
@@ -30,7 +30,7 @@ const Hero = () => {
         </div>
         <img src={sideimage2} alt="sideimage2" class='lg:block hidden mx-24'/>
       </div>
-      <div className="grid grid-cols-4 gap-7 mx-56 mb-3 mt-2">
+      <div className="grid grid-cols-4 gap-7 mx-40 mb-3 mt-2">
         <div className="border-2 bg-[#060E37] rounded-lg mb-6 sm:mb-0 w-[250px] h-[70px] gap-4">
           <p className=" text-white text-left text-md font-normal leading-relaxed mx-1">
             ThriftChain is Secure, Transparent,

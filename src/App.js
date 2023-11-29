@@ -1,7 +1,7 @@
 import React from 'react';
 import AllRoutes from './config/AllRoutes';
 import '@rainbow-me/rainbowkit/styles.css';
-import { darkTheme, getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import {darkTheme, getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { configureChains, createConfig, WagmiConfig} from 'wagmi';
 import { polygon } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
