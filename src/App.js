@@ -3,7 +3,6 @@ import AllRoutes from './config/AllRoutes';
 import '@rainbow-me/rainbowkit/styles.css';
 import {darkTheme, getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { configureChains, createConfig, WagmiConfig} from 'wagmi';
-import { polygon } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 
 const torochain = {
@@ -40,7 +39,7 @@ const torochain = {
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [
     // mainnet,
-    polygon,
+  
     torochain
   ],
   [publicProvider()]
