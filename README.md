@@ -76,7 +76,7 @@ Pitch Deck
 <https://www.canva.com/design/DAF0P-e5KFc/AK2ZTcMgW8FgpVTl5loU3Q/view?utm_content=DAF0P-e5KFc&utm_campaign=designshare&utm_medium=link&utm_source=editor>
 
 Git Repository
-https://github.com/pheobeayo/thriftchain
+https://github.com/thriftchain/thriftchain
 
 Deployed link
 https://thriftchain.vercel.app
