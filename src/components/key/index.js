@@ -14,6 +14,7 @@ const Key = () => {
 
 
     return (
+        <section>
         <div className='bg-[#070624] '>
 
             <div className="container mx-auto px-4 sm:px-[80px] py-[100px]">
@@ -192,7 +193,7 @@ const Key = () => {
 
             </div>
         </div>
-
+        </section>
 
     )
 
