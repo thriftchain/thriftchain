@@ -1,5 +1,4 @@
 import React from "react";
-import { HomeParent,HomeWrapper } from "./home.styles";
 import Hero from "../../components/hero/Hero";
 import Thrift from "../../components/thrift/Thrift";
 import Key from "../../components/key/index";
@@ -12,16 +11,18 @@ const Home = () => {
 
 
     return (
-        <HomeParent>
-
-            <HomeWrapper>
+        <main class='bg-[#070624] w-screen'>
+        
                 <Hero/>
+                <div>
                 <Thrift/>
+                </div>
+                <div class='mt-32'>
                 <Key/>
+                </div>
                 <Great/>
-            </HomeWrapper>
-        </HomeParent>
-       
+           
+       </main>
 
 
 
