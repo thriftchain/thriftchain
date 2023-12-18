@@ -2,8 +2,8 @@ import React from "react";
 import logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
 import { FaTwitter } from "react-icons/fa";
-import { SiDiscord } from "react-icons/si";
-import { HiOutlineMail } from "react-icons/hi";
+import { FaFacebook } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -20,9 +20,19 @@ function Footer() {
             Unlocking Financial Futures, One Goal at a Time
           </p>
           <div className="flex flex-row cursor-pointer space-x-5 text-white">
-            <FaTwitter />
-            <SiDiscord />
-            <HiOutlineMail />
+            <a href="https://twitter.com/ThriftChain"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-name ">  <FaTwitter /></a>
+            <a href='https://www.facebook.com/profile.php?id=61554276696134&mibextid=gik2fB'
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-name "> <FaFacebook /></a>
+
+            <a href='https://www.linkedin.com/company/thriftchain/'
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-name "> <FaLinkedin /></a>
           </div>
 
         </div>
