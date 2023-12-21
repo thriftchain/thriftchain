@@ -20,9 +20,9 @@ const Navbar = () => {
     };
 
     return (
-        <nav class="bg-[#070624]">
-            <div className='fixed top-0 right-0 left-0 bg-gradient z-50'>
-                <div className='flex gap-4 justify-center items-center mx-8 pt-10'>
+        <nav class="bg-[#060E37]">
+            <div className='fixed top-0 right-0 left-0 bg-gradient z-50 bg-[#060E37]'>
+                <div className='flex gap-4 justify-center items-center mx-8 pt-10 mb-2'>
                     <Link to='/'> <img src={logo} alt='logo' class='w-40' /></Link>
 
 
