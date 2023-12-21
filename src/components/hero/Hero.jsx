@@ -16,7 +16,7 @@ const Hero = () => {
           Unlock Savings, Achieve Dreams, Secure Tomorrow
         </h3>
         <div class="md:mx-96 md:px-8 md:mt-4 sm:mx-12 sm:mt-4">
-          <Link>
+          <Link to='/onboarding-data'>
             <button class="bg-gradient-to-r from-[#9C0F94] to-[#142698] hover:bg-blue-700 text-white font-semibold py-2 rounded-full border-white border-2 w-48 h-20">
               Join the Waitlist{" "}
             </button>{" "}

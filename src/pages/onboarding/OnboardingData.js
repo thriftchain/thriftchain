@@ -1,23 +1,21 @@
 import React from "react";
 import sideimage from "../../assets/sideimage.svg";
 import sideimage2 from "../../assets/sideimage2.svg";
-import { OnboardingParent, OnboardingWrapper } from "./onboarding.styles";
 import {Link} from "react-router-dom";
 
 const OnboardingData = () => {
   
 
     return (
-        <OnboardingParent>
-            <OnboardingWrapper>
+        
         <main className="bg-[#070624] w-screen">
-            <h1 className="text-[30px] md:text-[34px] font-bold capitalize  text-white mx-80 mt-20 px-8">
+            <h1 className="text-[30px] md:text-[34px] font-bold capitalize  text-white md:mx-80 md:mt-20 md:px-8 sm:mx-4">
                 Transforming Finance with ThriftChain:{" "}
             </h1>
-            <h2 className="text-[30px] md:text-[32px] font-bold capitalize text-white  mx-96 px-8">
+            <h2 className="text-[30px] md:text-[32px] font-bold capitalize text-white  md:mx-96 md:px-8 sm:mx-8">
                 Your Path to <span className="text-[#BD5FB8]">Financial Freedom.</span>
             </h2>
-            <div class="grid grid-cols-3 gap-4 mx-48 mt-8">
+            <div class="grid grid-cols-3 gap-4  md:mx-48 mt-8 sm:mx-4">
                 <img src={sideimage} alt="sideimage" />
                 <div className="border-2 border-white bg-[#070624] rounded-lg mb-6 sm:mb-0 w-[340px] h-[450px]">
                     <h2 className="text-white text-xl  text-center font-bold leading-loose">
@@ -45,7 +43,7 @@ const OnboardingData = () => {
                             <input class="block w-full cursor-pointer bg-[#B1B7DD] border-[#B1B7DD] border-solid border-2  text-[#0A134C] focus:outline-none focus:border-black  text-sm rounded-lg" aria-describedby="file_upload" id="file_upload" type="file" placeholder='Add a picture' />
                         </div>
                         <div class="flex items-center justify-between mt-6 mx-24">
-                           <Link to='/user'><button class="bg-gradient-to-r from-[#9C0F94] to-[#142698] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" type="button">
+                           <Link to='/log-in'><button class="bg-gradient-to-r from-[#9C0F94] to-[#142698] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" type="button">
                                 Submit
                             </button></Link> 
                         </div>
@@ -54,7 +52,7 @@ const OnboardingData = () => {
                 </div>
                 <img src={sideimage2} alt="sideimage2" style={{ marginLeft: "5rem" }} />
             </div>
-            <div className="grid grid-cols-4 gap-4 mx-72 mb-3 mt-2">
+            <div className="grid grid-cols-4 gap-4 md:mx-72 mb-3 mt-2 sm:mx-4">
                 <div className="border-2 bg-[#060E37] rounded-lg mb-6 sm:mb-0 w-[250px] h-[70px] gap-4">
                     <p className=" text-white text-left text-md font-normal leading-relaxed mx-1">
                         ThriftChain is Secure, Transparent,
@@ -70,8 +68,7 @@ const OnboardingData = () => {
             </div>
             <hr />
         </main>
-        </OnboardingWrapper>
-        </OnboardingParent>
+       
     );
 };
 
