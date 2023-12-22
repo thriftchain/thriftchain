@@ -17,21 +17,19 @@ const Login = () => {
         Your Path to <span className="text-[#BD5FB8]">Financial Freedom.</span>
       </h2>
       <div class="grid grid-cols-3 gap-0 h-max md:mx-4">
-      <div className="h-[200px] w-[200px] ">
+      <div className="md:h-[200px] md:w-[200px] sm:h-[100px] sm:w-[100px]">
         <img src={sideimage} alt="sideimage" />
         </div>
-        <div className="border-2 border-white bg-[#070624] rounded-lg mb-6 sm:mb-0 w-[340px] h-[300px]">
+        <div className="border-2 border-white bg-[#070624] rounded-lg mb-6 sm:mb-0 md:w-[340px] md:h-[300px] sm:w-[250px]">
           <h2 className="text-white text-xl  text-center font-bold leading-loose">
           Log In
           </h2>
           <h3 className="text-white text-sm  text-center font-normal">
           Log in by connecting your wallet
           </h3>
-          <div className="mx-24 mb-20 mt-4">
+          <div className="mx-24 mb-20 mt-8">
           <ConnectButton />
-           <div class='mt-4 mx-6'><Link to='/onboarding-data'><button class="bg-gradient-to-r from-[#9C0F94] to-[#142698] hover:bg-blue-700 text-white font-semibold py-2 rounded border-white border-spacing-1" >
-            Start Saving    </button></Link>
-            </div> 
+           
           </div>
           <h3 className="text-white text-sm  text-center font-normal">Don’t have an account yet? <Link to='/onboarding-data'><span className="text-[#BD5FB8]">Get started</span></Link></h3>
         </div>
@@ -40,14 +38,14 @@ const Login = () => {
         </div>
       </div>
       <div className="grid grid-cols-4 gap-0 h-max mb-2 md:mx-4">
-        <div className="border-2 bg-[#060E37] rounded-lg mb-6 sm:mb-0 w-[250px] h-[70px] gap-4">
+        <div className="border-2 bg-[#060E37] rounded-lg mb-6 sm:mb-0 w-[250px] h-[70px] gap-0">
           <p className=" text-white text-left text-md font-normal leading-relaxed mx-1">
             ThriftChain is Secure, Transparent,
             <br></br>and Efficient
           </p>
         </div>
         <div class='md:mx-36'>
-        <div className="border-2 bg-[#060E37] rounded-lg mb-6 sm:mb-0 w-[250px] h-[70px] gap-4 mx-96 ">
+        <div className="border-2 bg-[#060E37] rounded-lg mb-6 sm:mb-0 w-[250px] h-[70px] gap-0 mx-96 ">
           <p className=" text-white text-left text-md font-normal leading-relaxed mx-1">
             ThriftChain is the Future of
             <br></br>Financial Planning
