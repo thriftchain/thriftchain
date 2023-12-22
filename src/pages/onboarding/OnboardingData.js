@@ -16,10 +16,10 @@ const OnboardingData = () => {
                 Your Path to <span className="text-[#BD5FB8]">Financial Freedom.</span>
             </h2>
             <div class="grid grid-cols-3  gap-0 h-max md:mx-4">
-            <div className="h-[200px] w-[200px] ">
+            <div className="h-[200px] w-[200px] sm:h-[100px] sm:w-[100px]">
                 <img src={sideimage} alt="sideimage" />
                 </div>
-                <div className="border-2 border-white bg-[#070624] rounded-lg mb-6 sm:mb-0 w-[340px] h-[450px]">
+                <div className="border-2 border-white bg-[#070624] rounded-lg mb-6 sm:mb-0 w-[340px] h-[450px] sm:w-[250px]">
                     <h2 className="text-white text-xl  text-center font-bold leading-loose">
                         Let's get to know you
                     </h2>
@@ -31,20 +31,20 @@ const OnboardingData = () => {
                             <label class="block text-white text-sm font-bold mb-2" for="username">
                                 Name
                             </label>
-                            <input class="bg-[#B1B7DD] border-[#B1B7DD] rounded w-full py-2 px-3 text-[#0A134C] leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="E.g Naomi Roberts"></input>
+                            <input class="bg-[#B1B7DD] border-[#B1B7DD] rounded w-full py-2 px-3 text-[#0A134C] leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="E.g Naomi Roberts" required></input>
                         </div>
                         <div class="mb-1">
                             <label class="block text-white text-sm font-bold mb-2" for="country">
                                 Country
                             </label>
-                            <input class="bg-[#B1B7DD] border border-[#B1B7DD] rounded w-full py-2 px-3 text-[#0A134C] mb-3 leading-tight focus:outline-none focus:shadow-outline" id="country" type="text" placeholder="Add your country"></input>
+                            <input class="bg-[#B1B7DD] border border-[#B1B7DD] rounded w-full py-2 px-3 text-[#0A134C] mb-3 leading-tight focus:outline-none focus:shadow-outline" id="country" type="text" placeholder="Add your country" required></input>
 
                         </div>
                         <div class='mb-1'>
                             <label class="text-sm font-medium text-white block mb-2" for="user_avatar">Picture </label>
-                            <input class="block w-full cursor-pointer bg-[#B1B7DD] border-[#B1B7DD] border-solid border-2  text-[#0A134C] focus:outline-none focus:border-black  text-sm rounded-lg" aria-describedby="file_upload" id="file_upload" type="file" placeholder='Add a picture' />
+                            <input class="block w-full cursor-pointer bg-[#B1B7DD] border-[#B1B7DD] border-solid border-2  text-[#0A134C] focus:outline-none focus:border-black  text-sm rounded-lg" aria-describedby="file_upload" id="file_upload" type="file" placeholder='Add a picture' required/>
                         </div>
-                        <div class="flex items-center justify-between mt-6 mx-24">
+                        <div class="flex items-center justify-between mt-6 mx-10">
                            <Link to='/log-in'><button class="bg-gradient-to-r from-[#9C0F94] to-[#142698] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" type="button">
                                 Submit
                             </button></Link> 
@@ -57,14 +57,14 @@ const OnboardingData = () => {
                 </div>
             </div>
             <div className="grid grid-cols-4 gap-0 h-max mb-2 md:mx-4">
-                <div className="border-2 bg-[#060E37] rounded-lg mb-6 sm:mb-0 w-[250px] h-[70px] gap-4">
+                <div className="border-2 bg-[#060E37] rounded-lg mb-6 sm:mb-0 w-[250px] h-[70px] gap-0">
                     <p className=" text-white text-left text-md font-normal leading-relaxed mx-1">
                         ThriftChain is Secure, Transparent,
                         <br></br>and Efficient
                     </p>
                 </div>
                 <div class='md:mx-36'>
-                <div className="border-2 bg-[#060E37] rounded-lg mb-6 sm:mb-0 w-[250px] h-[70px] gap-4 mx-96  lg:block hidden">
+                <div className="border-2 bg-[#060E37] rounded-lg mb-6 sm:mb-0 w-[250px] h-[70px] gap-0 mx-96  lg:block hidden">
                     <p className=" text-white text-left text-md font-normal leading-relaxed mx-1">
                         ThriftChain is the Future of
                         <br></br>Financial Planning
