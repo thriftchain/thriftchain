@@ -1,12 +1,63 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import sideimage from "../../assets/sideimage.svg";
 import sideimage2 from "../../assets/sideimage2.svg";
 import {Link} from "react-router-dom";
+import axios from "axios";
+import SuccessPage from "../../components/success/SuccessPage";
 
 const OnboardingData = () => {
+    const [formData, setFormData] = useState({
+        name: "",
+        country: "",
+        picture: ""
+    });
+    
+    const [isLoading, setIsLoading] = useState(false);
+    const [isLoginSuccess, setIsLoginSuccess] = useState(false);
+  
+    useEffect(() => {
+      if (isLoginSuccess) {
+       }
+    }, [isLoginSuccess]);
+  
+   
+  
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+      setIsLoading(true);
+      try {
+        const response = await axios.post(
+          "https://thriftchain.onrender.com/api/v1/waitlist/joinwaitlist",
+          formData
+        );
+  
+        if (response.status === 200) {
+          console.log("Registration successful");
+          setIsLoginSuccess(true);
+          setIsLoading(false);
+        } else {
+          console.error("Registration failed");
+          setIsLoading(false);
+        }
+      } catch (error) {
+        console.log(error);
+        setIsLoading(false);
+      }
+    };
+
+   
+    
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
   
 
     return (
+        <>
+        { isLoginSuccess ? (
+            <SuccessPage text="Registration Successful" /> // Replace with the actual successPage component
+        ) : (
         
         <main className="bg-[#070624] w-screen">
             <h1 className="text-[30px] md:text-[34px] font-bold capitalize  text-white md:mx-80 md:mt-20 md:px-8 sm:mx-4">
@@ -16,37 +67,37 @@ const OnboardingData = () => {
                 Your Path to <span className="text-[#BD5FB8]">Financial Freedom.</span>
             </h2>
             <div class="grid grid-cols-3  gap-0 h-max md:mx-4">
-            <div className="h-[200px] w-[200px] sm:h-[100px] sm:w-[100px]">
+            <div className="h-[200px] w-[200px]  ">
                 <img src={sideimage} alt="sideimage" />
                 </div>
-                <div className="border-2 border-white bg-[#070624] rounded-lg mb-6 sm:mb-0 w-[340px] h-[450px] sm:w-[250px]">
+                <div className="border-2 border-white bg-[#070624] rounded-lg mb-6 sm:mb-0 w-[340px] h-[450px] sm:w-[280px]">
                     <h2 className="text-white text-xl  text-center font-bold leading-loose">
                         Let's get to know you
                     </h2>
                     <h3 className="text-white text-sm  text-center font-normal">
                         Add a little detail about yourself
                     </h3>
-                    <form class="bg-[#070624] shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                    <form onSubmit={handleSubmit} class="bg-[#070624] shadow-md rounded px-8 pt-6 pb-8 mb-4">
                         <div class="mb-1">
                             <label class="block text-white text-sm font-bold mb-2" for="username">
                                 Name
                             </label>
-                            <input class="bg-[#B1B7DD] border-[#B1B7DD] rounded w-full py-2 px-3 text-[#0A134C] leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="E.g Naomi Roberts" required></input>
+                            <input class="bg-[#B1B7DD] border-[#B1B7DD] rounded w-full py-2 px-3 text-[#0A134C] leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="E.g Naomi Roberts" value={formData.name} onChange={handleChange} required></input>
                         </div>
                         <div class="mb-1">
                             <label class="block text-white text-sm font-bold mb-2" for="country">
                                 Country
                             </label>
-                            <input class="bg-[#B1B7DD] border border-[#B1B7DD] rounded w-full py-2 px-3 text-[#0A134C] mb-3 leading-tight focus:outline-none focus:shadow-outline" id="country" type="text" placeholder="Add your country" required></input>
+                            <input class="bg-[#B1B7DD] border border-[#B1B7DD] rounded w-full py-2 px-3 text-[#0A134C] mb-3 leading-tight focus:outline-none focus:shadow-outline" id="country" type="text" placeholder="Add your country" value={formData.country} onChange={handleChange} required></input>
 
                         </div>
                         <div class='mb-1'>
                             <label class="text-sm font-medium text-white block mb-2" for="user_avatar">Picture </label>
-                            <input class="block w-full cursor-pointer bg-[#B1B7DD] border-[#B1B7DD] border-solid border-2  text-[#0A134C] focus:outline-none focus:border-black  text-sm rounded-lg" aria-describedby="file_upload" id="file_upload" type="file" placeholder='Add a picture' required/>
+                            <input class="block w-full cursor-pointer bg-[#B1B7DD] border-[#B1B7DD] border-solid border-2  text-[#0A134C] focus:outline-none focus:border-black  text-sm rounded-lg" aria-describedby="file_upload" id="file_upload" type="file" placeholder='Add a picture' value={formData.picture} onChange={handleChange} required/>
                         </div>
                         <div class="flex items-center justify-between mt-6 mx-10">
                            <Link to='/log-in'><button class="bg-gradient-to-r from-[#9C0F94] to-[#142698] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" type="button">
-                                Submit
+                           {isLoading? 'Loading...' : 'Submit'}
                             </button></Link> 
                         </div>
                     </form>
@@ -74,6 +125,8 @@ const OnboardingData = () => {
             </div>
             <hr />
         </main>
+         )}
+         </>
        
     );
 };
